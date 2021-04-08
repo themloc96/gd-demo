@@ -4,7 +4,6 @@ import LabelComponents from './LabelComponents';
 
 function DropdownConponents(props) {
 
-  const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const onClick = () => setIsActive(!isActive);
 
@@ -21,7 +20,7 @@ function DropdownConponents(props) {
         <div onclick="dropdownFunc(this)" class="dropbtn btn-default selection">
           Dropdown
         </div>
-        <div ref={dropdownRef} className={`dropdown-menu ${isActive ? 'active' : 'inactive'}`}>
+        <div className={`dropdown-menu ${isActive ? 'active' : 'inactive'}`}>
           <ul>
             {items.map(item => (
               <li class="items">

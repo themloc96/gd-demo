@@ -2,15 +2,17 @@ import React, { useEffect, useState } from 'react';
 // import PropTypes from 'prop-types';
 import LabelComponents from './LabelComponents';
 
-const InputComponents = (props) => {
+const InputComponents = ({label}) => {
 
     const [input, setInput] = useState('');
 
     return (
         <div>
             <div className="rows">
-                <LabelComponents name="Company name" />
-                <input className="field-input" type={props.type} name="" />
+              {label &&<span className="txt">
+                {props.name}
+            </span> }  
+                <input className="field-input" {...props} />
             </div>
         </div>
     );
