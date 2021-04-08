@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import PropTypes from 'prop-types';
 
-const InputComponents = ({ label = null, type= "text",classLabel, ...props }) => {
+const InputComponents = ({ label = null, type = "text", classLabel, ...props }) => {
 
     return (
         <div>
@@ -11,7 +11,7 @@ const InputComponents = ({ label = null, type= "text",classLabel, ...props }) =>
                         {label}
                     </span>
                 }
-                <input className="field-input" type={type} {...props} />
+                <input className="field-input" type={type} label={label} {...props} />
             </div>
         </div>
     );

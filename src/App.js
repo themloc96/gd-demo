@@ -19,7 +19,7 @@ function App() {
       </div>
 
       <div className="boxs mt-30">
-        <InputComponents type="password" label="Company Name" />
+        <InputComponents type="text" label="Company Name" />
         <DropdownConponents title="Zip" />
       </div>
     </div>

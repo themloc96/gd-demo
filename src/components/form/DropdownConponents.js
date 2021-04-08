@@ -2,7 +2,9 @@ import React, { useRef, useState } from 'react'
 import LabelComponents from './LabelComponents';
 // import PropTypes from 'prop-types'
 
-function DropdownConponents({ title }) {
+const DropdownConponents = ({ title, classLabel, ...props }) => {
+
+  // const [itemmmm, setitemmmm] = useState({ name: "CPN" });
 
   const [isActive, setIsActive] = useState(false);
   const onClick = () => setIsActive(!isActive);
@@ -13,16 +15,21 @@ function DropdownConponents({ title }) {
     { label: "R2-D2", value: "R2-D2" }
   ]);
 
+  // const handleChange = (e) => {
+  //   this.setitemmmm({ selectValue: e.target.value });
+  // }
+
   return (
     <div className="menu-container dropdown">
       <div onClick={onClick} >
         {
-          title && <span className="txt">
+          title && <span className={`txt ${classLabel}`}>
             {title}
           </span>
         }
         <div onclick="dropdownFunc(this)" className="dropbtn btn-default selection">
-          Dropdown
+          {/* value={this.state.selectValue}
+          onChange={this.handleChange} */}
         </div>
         <div className={`dropdown-menu ${isActive ? 'active' : 'inactive'}`}>
           <ul>
