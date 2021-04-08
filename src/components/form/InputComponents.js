@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 // import PropTypes from 'prop-types';
 
-const InputComponents = ({ label = null, type= "text", ...props }) => {
+const InputComponents = ({ label = null, type= "text",classLabel, ...props }) => {
 
     return (
         <div>
             <div className="rows">
                 {
-                    label && <span className="txt">
+                    label && <span className={`txt ${classLabel}`}>
                         {label}
                     </span>
                 }
