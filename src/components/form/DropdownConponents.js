@@ -9,15 +9,17 @@ const DropdownConponents = ({ title, classLabel, ...props }) => {
   const [isActive, setIsActive] = useState(false);
   const onClick = () => setIsActive(!isActive);
 
-  const [items] = React.useState([
+  const [items,setItems] = React.useState([
     { label: "Luke Skywalker", value: "Luke Skywalker" },
     { label: "C-3PO", value: "C-3PO" },
     { label: "R2-D2", value: "R2-D2" }
   ]);
 
-  // const handleChange = (e) => {
-  //   this.setitemmmm({ selectValue: e.target.value });
-  // }
+  const handleChange = (e) => {
+    const selected = e.target.value;
+      setItems(selected);
+  }
+  
 
   return (
     <div className="menu-container dropdown">
@@ -27,9 +29,8 @@ const DropdownConponents = ({ title, classLabel, ...props }) => {
             {title}
           </span>
         }
-        <div onclick="dropdownFunc(this)" className="dropbtn btn-default selection">
-          {/* value={this.state.selectValue}
-          onChange={this.handleChange} */}
+        <div onclick="dropdownFunc(this)" className="dropbtn btn-default selection" onChange = {handleChange}>
+          {item.value}
         </div>
         <div className={`dropdown-menu ${isActive ? 'active' : 'inactive'}`}>
           <ul>
@@ -40,6 +41,8 @@ const DropdownConponents = ({ title, classLabel, ...props }) => {
             ))}
           </ul>
         </div>
+
+        
       </div>
     </div>
   )
