@@ -1,12 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import logo from '../../../../src/asset/logo_company.png'; // with import
 
-
-LogoComponents.propTypes = {
-    url: PropTypes.string,
-    src: PropTypes.string,
-};
+// LogoComponents.propTypes = {};
 
 // console.log(logo);
 function LogoComponents(props) {

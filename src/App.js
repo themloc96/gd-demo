@@ -4,7 +4,8 @@ import LogoComponents from './components/company/header/LogoComponents';
 import UploadImageComponents from './components/company/header/UploadImageComponents';
 import ButtonDeleteComponents from './components/company/header/ButtonDeleteComponents';
 import InputComponents from './components/form/InputComponents';
-import LabelComponents from './components/form/LabelComponents';
+import DropdownConponents from './components/form/DropdownConponents';
+// import LabelComponents from './components/form/LabelComponents';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       </div>
 
       <div className="boxs mt-30">
-          <InputComponents type="textarea"/>
+        <InputComponents type="text" />
+        <DropdownConponents />
       </div>
     </div>
   );

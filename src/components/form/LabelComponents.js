@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
+// import PropTypes from 'prop-types';
 
 const LabelComponents = (props) => {
     return (
@@ -12,10 +11,6 @@ const LabelComponents = (props) => {
     );
 };
 
-
-LabelComponents.propTypes = {
-
-};
-
+// LabelComponents.propTypes = {};
 
 export default LabelComponents;

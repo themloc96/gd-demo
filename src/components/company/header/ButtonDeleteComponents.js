@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import iconDelete from '../../../../src/asset/icon_delete.svg'; // with import
-
 
 const ButtonDeleteComponents = () => {
     return (
@@ -11,10 +10,7 @@ const ButtonDeleteComponents = () => {
     );
 };
 
-
-ButtonDeleteComponents.propTypes = {
-
-};
+// ButtonDeleteComponents.propTypes = {};
 
 
 export default ButtonDeleteComponents;
