@@ -2,22 +2,19 @@ import React, { useRef, useState } from 'react'
 import LabelComponents from './LabelComponents';
 // import PropTypes from 'prop-types'
 
+
+const items = [
+    { label: "Luke Skywalker", value: "Luke Skywalker" },
+    { label: "C-3PO", value: "C-3PO" },
+    { label: "R2-D2", value: "R2-D2" }
+];
+
 const DropdownConponents = ({ title, classLabel }) => {
 
   const [isActive, setIsActive] = useState(false);
   const onClick = () => setIsActive(!isActive);
 
-  const items = [
-    { label: "Luke Skywalker", value: "Luke Skywalker" },
-    { label: "C-3PO", value: "C-3PO" },
-    { label: "R2-D2", value: "R2-D2" }
-  ];
 
-  const listItems = items.map((item) =>
-    <li>{item.value}</li>
-  );
-
-  
 
   return (
     <div className="menu-container dropdown">
@@ -32,7 +29,7 @@ const DropdownConponents = ({ title, classLabel }) => {
         </div>
         <div className={`dropdown-menu ${isActive ? 'active' : 'inactive'}`}>
           <ul>
-              {listItems}
+              <MembersList data={items} total={items?.length} />
           </ul>
         </div>
 
@@ -40,6 +37,10 @@ const DropdownConponents = ({ title, classLabel }) => {
       </div>
     </div>
   )
+}
+
+const MembersList = ({data = [], total = 0}) => { 
+  return total ? {data.map(item,index) =>  <li key={index}>{item.value}</li> } : null
 }
 
 // DropdownConponents.propTypes = {}
