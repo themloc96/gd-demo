@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import LabelComponents from './LabelComponents';
+// import LabelComponents from './LabelComponents';
 // import PropTypes from 'prop-types'
 
 
@@ -40,7 +40,11 @@ const DropdownConponents = ({ title, classLabel }) => {
 }
 
 const MembersList = ({data = [], total = 0}) => { 
-  return total ? {data.map(item,index) =>  <li key={index}>{item.value}</li> } : null
+  if(total) { 
+return data.map((item,index) => <li key={index}>{item.value}</li>)
+  }else { 
+    return null;
+  }
 }
 
 // DropdownConponents.propTypes = {}
