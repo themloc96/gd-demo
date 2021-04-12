@@ -6,17 +6,18 @@ import ButtonDeleteComponents from './components/company/header/ButtonDeleteComp
 import InputComponents from './components/form/InputComponents';
 import DropdownConponents from './components/form/DropdownConponents';
 import HeadComponents from './components/company/top/HeadComponent'
+import UserListComponent from './components/user/UserListComponent';
 
 const items = [
-    { label: "Item", value: "Item" },
-    { label: "Item 1", value: "Item 1" },
-    { label: "Item 2", value: "Item 2" }
+  { label: "Item", value: "Item" },
+  { label: "Item 1", value: "Item 1" },
+  { label: "Item 2", value: "Item 2" }
 ];
 
 function App() {
   return (
     <div className="App">
-      <HeadComponents />
+      {/* <HeadComponents />
       <div className="boxs">
         <LogoComponents />
         <div className="d-flex align-center mt-4">
@@ -78,7 +79,8 @@ function App() {
         </div>
         <div className="line"></div>
         <InputComponents type="text" label="Temperature" />
-      </div>
+      </div> */}
+      <UserListComponent />
     </div>
   );
 }
