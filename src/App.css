@@ -400,3 +400,55 @@ img {
   border-radius: 14px;
 }
 /* end style user setting */
+
+.settings-v2 .w-user-infomations .header {
+  margin-bottom: 17px;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.settings-v2 .w-user-infomations .header .avatar {
+  width: 80px;
+    height: 80px;
+    margin: 0 12px 0 0;
+    border-radius: 32px;
+    background: #f9f9f9;
+}
+
+.settings-v2 .w-user-infomations .header .avatar img {
+  width: 80px;
+    height: 80px;
+    border-radius: 32px;
+}
+
+.settings-v2 .w-user-infomations .header .btn-edit-photo {
+  margin: 0 16px 0 0;
+}
+
+.settings-v2 .set-user-left {
+  width: 320px;
+    min-width: 320px;
+    height: 100%;
+}
+.btn-default.has-icon {
+  padding: 4px 8px 4px 4px;
+}
+
+.settings-v2 .w-user-infomations .header .btn-remove {
+  cursor: pointer;
+}
+
+.settings-v2 .set-user-wrap {
+  max-width: 498px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.settings-v2 .w-user-infomations {
+  padding: 25px 25px 7px 25px;
+    border-radius: 3px;
+    border: 1px solid #e3e8ee;
+    width: 100%;
+    margin-bottom: 15px;
+}

@@ -1,9 +1,10 @@
 // import logo from './logo.svg';
 import './App.css';
 import CompanyComponent from './components/company/CompanyComponent';
-import UserListComponent from './components/user/UserListComponent';
+// import UserListComponent from './components/user/UserListComponent';
 // import lib BrowserRouter
 import { BrowserRouter as Router, Route } from "react-router-dom"; 
+import UserComponent from './components/user/UserComponent';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           {/* path: Là đường dẫn trên URL. */}
           {/* exact: route chi hoạt động nếu URL trên trình duyệt same với value của property path của nó. */}
           {/* component: Là component sẽ đươc load ra tương ứng với Route đó. */}
-          <Route path="/user" component={UserListComponent} />
+          <Route path="/user" component={UserComponent} />
       </div>
     </Router>
   );
