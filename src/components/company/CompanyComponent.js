@@ -6,7 +6,7 @@ import HeaderComponent from './header/HeaderComponent';
 
 const CompanyComponent = () => {
     return (
-        <div>
+        <div className="company">
             <HeadComponents />
             <HeaderComponent />
             <ContentComponent />

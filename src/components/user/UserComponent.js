@@ -7,8 +7,10 @@ import UserListComponent from './UserListComponent';
 const UserComponent = () => {
     return (
         <div className="gorilladesk settings-v2 container-wrap container-setting" >
-            <UserListComponent />
-            <FormAddUser />
+            <div className="contents-pages container-setting-user d-flex">
+                <UserListComponent />
+                <FormAddUser />
+            </div>
         </div>
     );
 };

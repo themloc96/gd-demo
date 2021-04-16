@@ -15,65 +15,61 @@ const listUser = [
 
 const UserListComponent = () => {
     return (
-        <div className="settings-v2 container-wrap container-setting">
-            <div className="contents-pages container-setting-user d-flex">
-                <div className="set-user-left container-column">
-                    <div className="title-header flex-auto">
-                        <h2>Users </h2>
-                        <div className="w-button">
-                            <div className="btn btn-main has-plus svg-plus white">
-                                <img src={IconAddd} alt="" />
-                                <span>Add User</span>
-                            </div>
-                        </div>
+        <div className="set-user-left container-column">
+            <div className="title-header flex-auto">
+                <h2>Users </h2>
+                <div className="w-button">
+                    <div className="btn btn-main has-plus svg-plus white">
+                        <img src={IconAddd} alt="" />
+                        <span>Add User</span>
                     </div>
-                    <div className="wrap-sidebar-select-user box-auto">
-                        <div className="scrolls">
-                            <ul>
-                                <li class="container-delete-all">
-                                    <div class="w-delete-all d-flex align-center">
-                                        <div class="check-items">
-                                            <input id="check-user-all" type="checkbox" value="" />
-                                            <div class="item-checkbox">
-                                                <label for="check-user-all"> 
-                                                    <span class="txt-ellipsis">0 items: </span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="item-delete border-custom ml-2">
-                                            <div class="svg-delete-grey">
-                                                <img src={IconDelete} />
-                                            </div>
-                                            <span class="ml-1">Delete</span>
+                </div>
+            </div>
+            <div className="wrap-sidebar-select-user box-auto">
+                <div className="scrolls">
+                    <ul>
+                        <li className="container-delete-all">
+                            <div className="w-delete-all d-flex align-center">
+                                <div className="check-items">
+                                    <input id="check-user-all" type="checkbox" value="" />
+                                    <div className="item-checkbox">
+                                        <label for="check-user-all">
+                                            <span className="txt-ellipsis">0 items: </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div className="item-delete border-custom ml-2">
+                                    <div className="svg-delete-grey">
+                                        <img src={IconDelete} />
+                                    </div>
+                                    <span class="ml-1">Delete</span>
+                                </div>
+                            </div>
+                        </li>
+                        {listUser.map(user => (
+                            <li className="selected">
+                                <div className="items-content">
+                                    <div className="check-items">
+                                        <input className="check-all purple" id="check-user-0" type="checkbox" value="" />
+                                        <div className="item-checkbox">
+                                            <label for="check-user-0"></label>
                                         </div>
                                     </div>
-                                </li>
-                                {listUser.map(user => (
-                                    <li className="selected">
-                                        <div className="items-content">
-                                            <div className="check-items">
-                                                <input className="check-all purple" id="check-user-0" type="checkbox" value="" />
-                                                <div className="item-checkbox">
-                                                    <label for="check-user-0"></label>
-                                                </div>
-                                            </div>
-                                            <div className="avatar">
-                                                <img src={user.imageURL} alt="" />
-                                            </div>
-                                            <div className="w-name">
-                                                <span> {user.name} </span>
-                                                <p> {user.position} </p>
-                                            </div>
-                                        </div>
-                                        <div className="wrap-date">
-                                            <p>{user.date}</p>
-                                            <p>{user.des}</p>
-                                        </div>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
+                                    <div className="avatar">
+                                        <img src={user.imageURL} alt="" />
+                                    </div>
+                                    <div className="w-name">
+                                        <span> {user.name} </span>
+                                        <p> {user.position} </p>
+                                    </div>
+                                </div>
+                                <div className="wrap-date">
+                                    <p>{user.date}</p>
+                                    <p>{user.des}</p>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </div>

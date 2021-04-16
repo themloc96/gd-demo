@@ -7,15 +7,18 @@ import ButtonDeleteComponents from '../../components/company/header/ButtonDelete
 
 const Header = () => {
     return (
-        <div className ="header d-flex">
-            <div className ="avatar">
-                <img src="https://unsplash.it/80/80" />
-            </div> 
-            <div className ="btn-edit-photo btn-default has-icon">
-                <img src={IconEdit} /> Edit Photo
-            </div>  
-            <div className ="btn-remove svg-delete-grey">
-                <img src={ButtonDeleteComponents} />
+        <div>
+
+            <div className="header d-flex">
+                <div className="avatar">
+                    <img src="https://unsplash.it/80/80" />
+                </div>
+                <div className="btn-edit-photo btn-default has-icon">
+                    <img src={IconEdit} /> Edit Photo
+                </div>
+                <div className="btn-remove svg-delete-grey">
+                    <ButtonDeleteComponents />
+                </div>
             </div>
         </div>
     );
